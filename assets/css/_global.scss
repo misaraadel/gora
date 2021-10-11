@@ -1,0 +1,175 @@
+/*start general properties for website*/
+@font-face {
+    font-family: "ExpoArabic";
+    src: url(../fonts/ExpoArabic/ExpoArabic-Medium.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "ExpoArabic";
+    src: url(../fonts/ExpoArabic/ExpoArabic-Book.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "ExpoArabic";
+    src: url(../fonts/ExpoArabic/ExpoArabic-SemiBold.ttf);
+    font-weight: 900;
+}
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "ExpoArabic" , sans-serif ;
+    scroll-behavior: smooth;
+    &::selection{
+        background-color: #A57034;
+        color: #fff; 
+    }
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: #ccc;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #A57034; 
+        border-radius: 8px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: #A57034; 
+    }
+}
+.overflowNone{
+    overflow: hidden;
+}
+.btn:focus,
+button:focus,
+input:focus,
+.form-control:focus {
+    outline-width: 0px !important;
+    outline-color: transparent !important;
+    box-shadow: 0 0 0 0 rgba($color: #000000, $alpha: 0);
+}
+
+a {
+    text-decoration: none !important;
+}
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.owl-theme .owl-dots .owl-dot span{
+    width: 20px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #A57034;
+    opacity: .5;
+    transition: all .5s linear;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+    background-color: #A57034;
+    opacity: 1;
+}
+.overflowNone{
+    overflow: hidden;
+}
+.heading{
+    width: 100%;
+    padding: 20px 0px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 99;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 70px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: url('../images/heading_pattern.png');
+        background-size: cover;
+        background-repeat: repeat-x;
+        animation: waveTranslate 10s linear infinite;
+        left: 0;
+        z-index: -1;
+    }
+    h4{
+        width: fit-content;
+        margin: auto;
+        padding: 10px 15px;
+        background-color: #fff;
+        color: #A57034;
+        font-size: calc(40px + 1vw);
+        font-weight: 900;
+        border: 1px solid #A57034;
+    }
+}
+.heading-content{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    h4{
+        color: #A57034;
+        font-size: calc(40px + 1vw);
+        font-weight: 700;
+        line-height: 2.5rem;
+    }
+}
+.flex-content{
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center !important;
+    align-content: center !important;
+    &.center-data{
+        justify-content: center !important;
+    }
+}
+.btn-shape{
+    width: fit-content;
+    padding: 10px 45px;
+    border: none;
+    outline: none;
+    color: #fff;
+    &.btn-dark{
+        background-color: #4A291F;
+        &:hover{
+            background-color: #A57034;
+            color: #fff;
+        }
+    }
+    &.btn-light{
+        background-color: #A57034;
+        &:hover{
+            background-color: #4A291F;
+            color: #fff;
+        }
+    }
+    
+}
+.scroll-top-btn{
+    width: 40px;
+    height: 40px;
+    background-color: #A57034;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    transform: scale(0) rotate(360deg);
+    transition: all .4s linear;
+    z-index: 999;
+    box-shadow: 0px 0px 10px rgba($color: #000000 , $alpha: .2);
+    i{
+        font-size: 15px;
+        color: #fff;
+    }
+    &.active{
+        transform: scale(1) rotate(0deg);
+    }
+}
